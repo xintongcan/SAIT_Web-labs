@@ -30,7 +30,7 @@ let duration = 0;
 
 // 1.create a function called recalculate()
 
-function recalculate(duration, modelName) {
+function recalculate() {
     let costLabel = document.getElementById("calculated-cost");
 // 2.if modelName is currently "XYZ", duration * 100 gives us the new total cost.
     if (modelName === "XYZ") {
@@ -74,7 +74,7 @@ function changeModel() {
         modelName = "XYZ";
         modelText.innerHTML = "Model XYZ";
     }
-    recalculate(duration, modelName);
+    recalculate();
 }
 // 3. have this function run automatically whenever the pseudo-button is clicked
 modelButton.addEventListener("click", changeModel);
@@ -103,7 +103,7 @@ function changeDuration() {
     let durationText = document.getElementById("duration-text");
     duration = prompt("Enter a new duration");
     durationText.innerHTML = duration;
-    recalculate(duration, modelName);
+    recalculate();
 }
 // 3.attach this function to the "Change Duration" pseudo-button
 
